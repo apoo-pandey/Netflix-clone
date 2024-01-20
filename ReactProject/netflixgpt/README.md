@@ -88,3 +88,7 @@ created react app form cli, to get all the things beforehand, comprising of webp
 -NetflixGPT
 -Search Bar
 -Movie Suggestion
+
+# Notes:
+
+- i am using sign in form as sign up form, by adding a toggle option, which will use a state variable to toggle for sign in and sign up form to show for user.

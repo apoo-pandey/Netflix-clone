@@ -1,11 +1,8 @@
 import "./App.css";
+import Body from "./components/Body";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Let's start Apoorva. We'll do it</h1>
-    </div>
-  );
+  return <Body />;
 }
 
 export default App;
