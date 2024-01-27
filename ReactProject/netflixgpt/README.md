@@ -92,3 +92,23 @@ created react app form cli, to get all the things beforehand, comprising of webp
 # Notes:
 
 - i am using sign in form as sign up form, by adding a toggle option, which will use a state variable to toggle for sign in and sign up form to show for user.
+
+# form-validation:
+
+for form validation i am going to use useRef() hook, i will put the validation function in a separate function as its an utility function.
+
+# form-authentication
+
+we are using Google Firebase for user authentication. Its a backend tool, we can use nodeJS also
+
+# deployed to production
+
+we deployed our app to production using firebase.
+
+# Store
+
+we are using redux toolkit for storing data.
+
+# TMDB API
+
+we will be using TMDB API for movies, we are not using netflix API as its not public (we'll need authentication) and it changes often so we'll be using TMBD instead as it doesn't change often.

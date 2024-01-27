@@ -4,6 +4,10 @@
 .Login-header {
   position: absolute;
 }
+.main-header {
+  display: flex;
+  justify-content: space-between;
+}
 .login-form {
   position: absolute;
   margin-top: 200px;
@@ -26,4 +30,16 @@
   background-color: red;
   font-weight: 600;
   cursor: pointer;
+}
+.form-message {
+  color: red;
+}
+.signout-btn {
+  background-color: red;
+  height: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+.user-sign-out {
+  display: flex;
 }
