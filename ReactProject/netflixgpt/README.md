@@ -112,3 +112,11 @@ we are using redux toolkit for storing data.
 # TMDB API
 
 we will be using TMDB API for movies, we are not using netflix API as its not public (we'll need authentication) and it changes often so we'll be using TMBD instead as it doesn't change often.
+
+# Notes:
+
+-we have used unsubscribe method to clean up our onAuthStateChanged after component unmounts.
+-we have directed our user if logged in from login page to browse page and if he's not logged in and he tries to access browse page then he navigates to login page.
+-add all the hardcoded string values into a constant files.
+-we can see that our API calls are made twice and some more things are happening twice, because of React strictMode. React StrictMode checks for any inconsistency by doing multiplte renders. If we remove it, it will do everything for once, but if we keep it also it will do multiple renders only for my local, when we push it for development it will not do there.
+-In fetch we have to manually parse data as JSON but in axios we don't have to parse data as json, as it takes from contentType.

@@ -10,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { NETFLIX_BG, PHOTO_URL } from "../utils/constants";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const Login = () => {
   const email = useRef();
   const password = useRef();
   const name = useRef();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const toggleform = () => {
     setIsSignIn(!isSignIn);
@@ -44,7 +45,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://example.com/jane-q-user/profile.jpg",
+            photoURL: PHOTO_URL,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -56,19 +57,19 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
+              // navigate("/browse");
             })
             .catch((error) => {});
 
           console.log(user);
-          navigate("/browse");
+          // navigate("/browse");
           // ...
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setFormMessage(errorCode + " " + errorMessage);
-          navigate("/");
+          // navigate("/");
           // ..
         });
     } else {
@@ -82,14 +83,14 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
+          // navigate("/browse");
           // ...
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setFormMessage(errorCode + " " + errorMessage);
-          navigate("/");
+          // navigate("/");
         });
     }
   };
@@ -162,10 +163,7 @@ const Login = () => {
         </form>
       </div>
       <div>
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/df6621a3-890c-4ca0-b698-90bd5152f3d1/20a59be7-7062-4991-bca0-805e9a7f2716/IN-en-20240107-trifectadaily-perspective_alpha_website_large.jpg"
-          alt="netflix-logo"
-        />
+        <img src={NETFLIX_BG} alt="netflix-logo" />
       </div>
     </div>
   );
