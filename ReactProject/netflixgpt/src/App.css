@@ -43,3 +43,38 @@
 .user-sign-out {
   display: flex;
 }
+.movie-title-play-btn {
+  background-color: gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+.movie-title-play-btn:hover {
+  cursor: pointer;
+}
+.movie-title-info-btn {
+  background-color: gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.movie-title {
+  font-weight: 1000;
+  font-size: xx-large;
+}
+.movie-overview {
+  font-weight: 400;
+}
+.movie-description-container {
+  width: 500px;
+  margin: 40px;
+  position: absolute;
+  color: white;
+  padding-top: 250px;
+}
+.trailer-video-bg {
+  min-width: 100%;
+  height: 700px;
+}
